@@ -31,11 +31,11 @@ const Header = () => {
         color="white"
         className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/Home">Home</NavLink>
+       <NavLink to = "/Home" className="hover:text-light-blue-400  hover:underline transition duration-300">Home</NavLink>
       </Typography>
       <Menu>
         <MenuHandler>
-          <Typography as="li" className="p-1 font-bold text-xl text-white cursor-pointer">
+          <Typography as="li" className="p-1 font-bold text-xl text-white cursor-pointer hover:text-light-blue-400  hover:underline transition duration-300">
             Program
           </Typography>
         </MenuHandler>
@@ -51,7 +51,7 @@ const Header = () => {
        color="white"
          className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/staffdetail"> Staff Detail</NavLink>
+       <NavLink to = "/staffdetail"  className="hover:text-light-blue-400  hover:underline transition duration-300"> Staff Detail</NavLink>
       </Typography>
       <Typography
         as="li"
@@ -59,7 +59,7 @@ const Header = () => {
        color="white"
          className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/Admissionform">Admission Form</NavLink>
+       <NavLink to = "/Admissionform"  className="hover:text-light-blue-400  hover:underline transition duration-300">Admission Form</NavLink>
       </Typography>
        <Typography
         as="li"
@@ -67,7 +67,7 @@ const Header = () => {
        color="white"
          className="p-1 font-bold text-xl"
       >
-      <NavLink to = "/Notice">Notice</NavLink>
+      <NavLink to = "/Notice"  className="hover:text-light-blue-400  hover:underline transition duration-300">Notice</NavLink>
       </Typography>
        <Typography
         as="li"
@@ -75,7 +75,7 @@ const Header = () => {
         color="white"
         className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/Syllabus">Syllabus</NavLink>
+       <NavLink to = "/Syllabus"  className="hover:text-light-blue-400  hover:underline transition duration-300">Syllabus</NavLink>
       </Typography>
        <Typography
         as="li"
@@ -83,7 +83,7 @@ const Header = () => {
         color="white"
        className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/aboutus">About Us</NavLink>
+       <NavLink to = "/aboutus" className="hover:text-light-blue-400  hover:underline transition duration-300">About Us</NavLink>
       </Typography>
     </ul>
   );
