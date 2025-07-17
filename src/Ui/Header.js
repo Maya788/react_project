@@ -1,12 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   MobileNav,
   Typography,
- Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
 
 } from "@material-tailwind/react";
 import { NavLink } from "react-router";
@@ -15,7 +11,8 @@ import nflag from'./images/nflag.jpeg'
  
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
- 
+  const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
+   const [staffdetailsDropdownOpen, setStaffDetailsDropdownOpen]= useState(false);
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -24,42 +21,75 @@ const Header = () => {
   }, []);
  
   const navList = (
-    <ul className="flex gap-12 size-20xl ml-96">
+    <ul className="flex gap-12 size-20xl sticky top-0 ml-96">
        <Typography
         as="li"
         variant="medium"
         color="white"
         className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/Home" className="hover:text-light-blue-400  hover:underline transition duration-300">Home</NavLink>
+       <NavLink to = "/Home" className="hover:text-light-blue-400  transition duration-300">Home</NavLink>
       </Typography>
-      <Menu>
-        <MenuHandler>
-          <Typography as="li" className="p-1 font-bold text-xl text-white cursor-pointer hover:text-light-blue-400  hover:underline transition duration-300">
-            Program
-          </Typography>
-        </MenuHandler>
-        <MenuList className="z-[1000]">
-          <MenuItem><NavLink to="/Program/Animal"> Diploma in Animal Science</NavLink></MenuItem>
-          <MenuItem><NavLink to="/Program/Plant"> Diploma in Plant Science</NavLink></MenuItem>
-          <MenuItem><NavLink to="/Program/Dit">Diploma in Information Technology</NavLink></MenuItem>
-        </MenuList>
-      </Menu>
+         {/* Programs Dropdown */}
+      <div
+        className="relative group list-none"
+        onMouseEnter={() => setProgramsDropdownOpen(true)}
+        onMouseLeave={() => setProgramsDropdownOpen(false)}
+      >
+        <Typography
+          as="li"
+          variant="medium"
+          className="p-1 font-bold text-xl text-white cursor-pointer group-hover:text-light-blue-400  transition duration-300"
+        > Programs
+        </Typography>
+        {programsDropdownOpen && (
+          <ul className="absolute left-0 top-full  hidden group-hover:block bg-white text-black shadow-lg rounded-md z-50 min-w-[250px]">
+            <li className="px-4 py-2 hover:bg-blue-100">
+              <NavLink to="/Programs/Animal">Diploma in Animal Science</NavLink>
+            </li>
+            <li className="px-4 py-2 hover:bg-blue-100">
+             <NavLink to="/Programs/Plant">Diploma in Plant Science</NavLink>
+            </li>
+             <li className="px-4 py-2 hover:bg-blue-100">
+               <NavLink to="/Programs/Dit">Diploma in Information Technology</NavLink>
+            </li>
+            
+          </ul>
+        )}
+      </div>
+      
+ {/* staffdetails Dropdown  */}
+      <div 
+        className="relative group list-none"
+        onMouseEnter={() => setStaffDetailsDropdownOpen(true)}
+        onMouseLeave={() => setStaffDetailsDropdownOpen(false)}
+ >
+   <Typography
+      as="li"
+      variant="medium"
+      className="p-1 font-bold text-xl text-white cursor-pointer group-hover:text-light-blue-400  transition duration-300"
+    > Staff Details
+    </Typography>
+    {staffdetailsDropdownOpen &&(
+      <ul className="absolute left-0 top-full  hidden group-hover:block bg-white text-black shadow-lg rounded-md z-50 min-w-[200px]">
+         <li className="px-4 py-2 hover:bg-blue-100">
+          <NavLink to="/staffdetails/administrative"> Administrative</NavLink>
+        </li>
+        <li className="px-4 py-2 hover:bg-blue-100">
+          <NavLink to="/staffdetails/instructor"> Instructor</NavLink>
+        </li>
+        </ul>
+    )}
+  </div>
+   
+     
       <Typography
         as="li"
         variant="medium"
        color="white"
          className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/staffdetail"  className="hover:text-light-blue-400  hover:underline transition duration-300"> Staff Detail</NavLink>
-      </Typography>
-      <Typography
-        as="li"
-        variant="medium"
-       color="white"
-         className="p-1 font-bold text-xl"
-      >
-       <NavLink to = "/Admissionform"  className="hover:text-light-blue-400  hover:underline transition duration-300">Admission Form</NavLink>
+       <NavLink to = "/Admissionform"  className="hover:text-light-blue-400   transition duration-300">Admission Form</NavLink>
       </Typography>
        <Typography
         as="li"
@@ -67,7 +97,7 @@ const Header = () => {
        color="white"
          className="p-1 font-bold text-xl"
       >
-      <NavLink to = "/Notice"  className="hover:text-light-blue-400  hover:underline transition duration-300">Notice</NavLink>
+      <NavLink to = "/Notice"  className="hover:text-light-blue-400  transition duration-300">Notice</NavLink>
       </Typography>
        <Typography
         as="li"
@@ -75,7 +105,7 @@ const Header = () => {
         color="white"
         className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/Syllabus"  className="hover:text-light-blue-400  hover:underline transition duration-300">Syllabus</NavLink>
+       <NavLink to = "/Syllabus"  className="hover:text-light-blue-400 transition duration-300">Syllabus</NavLink>
       </Typography>
        <Typography
         as="li"
@@ -83,16 +113,17 @@ const Header = () => {
         color="white"
        className="p-1 font-bold text-xl"
       >
-       <NavLink to = "/aboutus" className="hover:text-light-blue-400  hover:underline transition duration-300">About Us</NavLink>
+       <NavLink to = "/aboutus" className="hover:text-light-blue-400  transition duration-300">About Us</NavLink>
       </Typography>
     </ul>
   );
  
   return (
     <div>
+     
       <div className="flex ">
     <div>
-       <img src = {logo} alt="" className="h-36 w-36 mt-8  ml-48"/>
+       <img src = {logo} alt="" className="h-36 w-36 mt-7 ml-60"/>
     </div>
     <div className="text-center mt-4 ml-40 font-bold"> 
       <h1 className="  text-red-600 "> 'सिप हुन्छ हातमा, रोजगारि साथमा'</h1>

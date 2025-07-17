@@ -25,7 +25,7 @@ const Animal = () => {
       </div>
         </div>
         <div className='rounded-xl bg-white ml-56 w-[800px] h-[450px] text-justify p-5 '>
-        <h1 className='  font-bold underline  text-center text-2xl  '>Message From Animal Science Co-ordinator</h1>
+        <h1 className='  font-bold border-b-2  text-center text-2xl  '>Message From Animal Science Co-ordinator</h1><br/>
         <h2>Dear Students,</h2> <br/>
 <h2>Greetings from Rolpa Polytechnic Institute! <br/>Welcome to the Department of Animal Science!
    It is my pleasure to introduce you to the field of Animal Science, an essential discipline dedicated to the health and well-being of animals. As the veterinary coordinator, my goal is to ensure that students must provide a comprehensive curriculum that combines theoretical knowledge with hands-on clinical training. We have well-equipped labs, clinics, farms and friendly teaching-learning environment with well qualified and supporting teaching staffs for research facilities that help students to gain practical experience. We are committed to excellence in education, research, and clinical practice, ensuring that future veterinarians are well-equipped to care for animals and contribute to public health.<br/><br/>

@@ -5,7 +5,7 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 const Caro = () => {
   return (
     <Carousel autoplayDelay={2000} autoplay loop 
-      className="rounded-xl mt-10 h-[600px] w-[1000px] ml-60 "
+      className="rounded-xl mt-10 h-[600px] w-[1000px] ml-64 "
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="text"

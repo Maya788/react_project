@@ -8,7 +8,6 @@ import Syllabus from './Features/Syllabus'
 import AboutUs from './Features/AboutUs'
 import AdmissionForm from './Features/AdmissionForm'
 import Plant from './Components/Plant'
-import Animal from './Components/Animal'
 import Dit from './Components/Dit'
 
 const router = createBrowserRouter([{
@@ -17,9 +16,9 @@ const router = createBrowserRouter([{
   children:[
     {index:true, element:<Home/>},
     {path:'home',element:<Home/>},
-    {path:'program/animal',element:<Animal/>},
-    {path:'program/plant',element:<Plant/>},
-   {path:'program/Dit',element:<Dit/>},
+    
+    {path:'programs/plant',element:<Plant/>},
+   {path:'programs/Dit',element:<Dit/>},
     {path:'staffdetail', element:<StaffDetail/>},
     {path:'notice', element:<Notice/>},
     {path:'syllabus',element:<Syllabus/>},
