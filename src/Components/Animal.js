@@ -4,27 +4,24 @@ import vet from './assets/vet.jpg'
 const Animal = () => {
   return (
     <div>
-      <div className='bg-blue-gray-50 mt-6 underline text-center text-3xl font-semibold p-4 '>About of Animal Science</div>
+      <div className='bg-blue-gray-50 mt-6 underline text-center text-2xl font-semibold p-4 '>About of Animal Science</div>
       <div className='flex mt-5 bg-blue-gray-50'>
        <div className='text-justify'>
-<img src={vet} alt='' className='rounded-xl mt-20 h-64 ml-28 w-64' />
+<img src={vet} alt='' className='rounded-xl mt-20 h-56 ml-28 w-80' />
       </div>
-       <div className='rounded-xl  w-[980px] h-[450px] ml-80 p-5 mr-28'>
-        <h1 className='  font-semibold text-2xl text-center underline mt-4 '> Animal Science</h1> <br/>
-        <h2>Dear Student and Parents,</h2> <br/> 
-<h2 >I hope this Message finds you well. As the Agriculture Co-ordinator, I would like to take a moment to 
-  share the exciting opportunities available in our agricultural program. Agriculture plyas a vital role
-   in our communities, not just as a career path,but as an essential part of our everyday lives.</h2>
+       <div className='rounded-xl  w-full h-[360px] ml-80 p-4 mr-28'>
+        <h1 className='  font-bold text-center text-2xl underline mt-4 '> Animal Science</h1>
+<h2  className='text-justify text-xl mt-10' >Animal science is a multidisciplinary field that focuses on the study of animals, addressing various aspects such as their biology, physiology, nutrition, genetics, behavior, and management practices. It encompasses the understanding of how animals function biologically and respond to their environments, as well as the nutritional needs critical for their health and productivity. Key areas include genetics and breeding, which aim to enhance traits like productivity and resistance to diseases, and animal behavior, which examines how animals interact within their social structures and habitats.</h2>
       </div>
       </div>
-       <div className='flex mt-4 bg-gray-50 py-14 '>
-        <div className='ml-28 mt-4'>
+       <div className='flex mt-5 bg-gray-50 py-10'>
+        <div className='ml-28'>
         <div >
-<img src={sanjeev} alt='' className='rounded-xl mt-20 h-72 w-60' />
+<img src={sanjeev} alt='' className='rounded-xl mt-12 h-72 w-60' />
 <h2 className='text-center  bg-orange-50 rounded-xl h-14 w-60 mt-2'>Dr.Sanjeev Acharya <br/>Animal Science Co-odinator</h2>
       </div>
         </div>
-        <div className='rounded-xl bg-white ml-56 w-[800px] h-[450px] text-justify p-5 '>
+        <div className='rounded-xl bg-white ml-56 w-[800px] h-[450px] text-justify p-5'>
         <h1 className='  font-bold border-b-2  text-center text-2xl  '>Message From Animal Science Co-ordinator</h1><br/>
         <h2>Dear Students,</h2> <br/>
 <h2>Greetings from Rolpa Polytechnic Institute! <br/>Welcome to the Department of Animal Science!

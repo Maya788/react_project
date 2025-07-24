@@ -13,6 +13,7 @@ const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
    const [staffdetailsDropdownOpen, setStaffDetailsDropdownOpen]= useState(false);
+   const [aboutusDropdownOpen, setaboutusDropdownOpen]=useState(false);
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -107,14 +108,29 @@ const Header = () => {
       >
        <NavLink to = "/Syllabus"  className="hover:text-light-blue-400 transition duration-300">Syllabus</NavLink>
       </Typography>
-       <Typography
-        as="li"
-        variant="medium"
-        color="white"
-       className="p-1 font-bold text-xl"
-      >
-       <NavLink to = "/aboutus" className="hover:text-light-blue-400  transition duration-300">About Us</NavLink>
-      </Typography>
+      {/* about us  */}
+        <div 
+        className="relative group list-none"
+        onMouseEnter={() => setaboutusDropdownOpen(true)}
+        onMouseLeave={() => setaboutusDropdownOpen(false)}
+ >
+   <Typography
+      as="li"
+      variant="medium"
+      className="p-1 font-bold text-xl text-white cursor-pointer group-hover:text-light-blue-400  transition duration-300"
+    > About us
+    </Typography>
+    {aboutusDropdownOpen &&(
+      <ul className="absolute left-0 top-full  hidden group-hover:block bg-white text-black shadow-lg rounded-md z-50 min-w-[200px]">
+         <li className="px-4 py-2 hover:bg-blue-100">
+          <NavLink to="/aboutus/msg"> Principal Msg</NavLink>
+        </li>
+        <li className="px-4 py-2 hover:bg-blue-100">
+          <NavLink to="/aboutus/aaa"> About</NavLink>
+        </li>
+        </ul>
+    )}
+  </div>
     </ul>
   );
  

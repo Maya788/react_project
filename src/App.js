@@ -4,13 +4,14 @@ import RouteLayout from './Ui/RouteLayout'
 import Home from './Features/Home'
 import Notice from './Features/Notice'
 import Syllabus from './Features/Syllabus'
-import AboutUs from './Features/AboutUs'
 import AdmissionForm from './Features/AdmissionForm'
 import Plant from './Components/Plant'
 import Dit from './Components/Dit'
 import Administrative from './Components/Administrative'
 import Instructor from './Components/Instructor'
 import Animal from './Components/Animal'
+import Msg from './Components/Msg'
+import Aaa from './Components/Aaa'
 
 const router = createBrowserRouter([{
   path:'/',
@@ -26,7 +27,8 @@ const router = createBrowserRouter([{
     {path:'notice', element:<Notice/>},
     {path:'syllabus',element:<Syllabus/>},
     {path:'admissionform',element:<AdmissionForm/>},
-    {path:'aboutUs', element:<AboutUs/>}
+    {path:'aboutUs/msg', element:<Msg/>},
+    {path:'aboutus/aaa',element:<Aaa/>}
     
     
    

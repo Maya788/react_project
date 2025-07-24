@@ -4,22 +4,19 @@ import tttt from './assets/tttt.png'
 const Dit = () => {
   return (
     <div>
-      <div className='bg-blue-gray-50 mt-6 underline text-3xl text-center font-semibold p-4 '>About of Information Technology</div>
+      <div className='bg-blue-gray-50 mt-6 underline text-2xl text-center font-semibold p-4 '>About of Information Technology</div>
       <div className='flex mt-5 bg-blue-gray-50'>
        <div >
-<img src={tttt} alt='' className='rounded-xl mt-20 h-64 ml-28 w-64' />
+<img src={tttt} alt='' className='rounded-xl mt-10 h-52 ml-28 w-72' />
       </div>
-       <div className='rounded-xl  w-[980px] h-[500px] ml-80 p-5 mr-28'>
+       <div className='rounded-xl  w-full h-[300px] ml-80 p-4 mr-28'>
         <h1 className='  font-bold text-center text-2xl underline mt-4 '> Information Technology</h1>
-        <h2>Dear Student and Parents,<br/><br/>
-I hope this Message finds you well. As the Agriculture Co-ordinator, I would like to take a moment to 
-  share the exciting opportunities available in our agricultural program. Agriculture plyas a vital role
-   in our communities, not just as a career path,but as an essential part of our everyday lives.</h2>
+        <h2 className='text-justify text-xl mt-10'>Information technology is a set of related fields that encompass computer systems, software, programming languages, data and information processing, and storage. IT forms part of information and communications technology. IT makes communication more efficient and allows for remote work. IT includes software and hardware that make communication possible on the internet and within organizations.</h2>
       </div>
       </div>
-       <div className='flex mt-5 bg-gray-50 py-14 '>
-        <div className='ml-28 mt-4'>
-        <div >
+       <div className='flex mt-5 bg-gray-50 py-10 '>
+        <div className='ml-28 '>
+        <div>
 <img src={ssss} alt='' className='rounded-xl mt-5 h-72 w-60' />
 <div className='bg-orange-50 rounded-xl h-14 w-60'>
       <h2 className='text-center mt-2'>Sushil Kc</h2>

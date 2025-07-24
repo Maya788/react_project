@@ -50,7 +50,7 @@ const Ntable = () => {
       <div className='bg-blue-gray-50 mt-6  text-center font-bold text-2xl p-4 '>
         Notice Board</div>
        <button
-      className="flex ml-[1300px] bg-blue-700 hover:bg-blue-400 text-white px-4 py-2 rounded shadow-md transition duration-200">
+      className="flex ml-[1300px] bg-blue-700 hover:bg-blue-400  text-white px-4 py-2 rounded-xl shadow-md transition duration-200">
   <span>Admin</span>
     </button>
      <div className="overflow-x-auto mt-8">

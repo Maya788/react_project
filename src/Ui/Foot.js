@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
+import { FaFacebookF,FaInstagram,FaTiktok } from 'react-icons/fa';
+
 
 const Foot = () => {
   return (
@@ -19,7 +20,7 @@ const Foot = () => {
   <ul>
     <li>
       <a
-        href="https://itms.ctevt.org.np:5580//"
+        href="https://ctevt.org.np/"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:underline"
@@ -29,7 +30,7 @@ const Foot = () => {
     </li>
     <li>
       <a
-        href="https://ctevtexam.org.np/"
+        href="https://itms.ctevt.org.np:5580//"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:underline"
@@ -63,7 +64,14 @@ const Foot = () => {
                 className="flex items-center gap-2 hover:underline">facebook
               </a>
             </li>
-            <li>Tiktok</li>
+           <li>
+              <a
+                href="https://www.tiktok.com/search?q=rolpa%20polytechnic%20institute&t=1753104619613"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:underline">TikTok
+              </a>
+            </li>
             <li>YouTube</li>
             <li>Whatsapp</li>
           </ul>
@@ -77,19 +85,17 @@ const Foot = () => {
         <p className="text-sm">&copy; 2025 Rolpa Polytechnic Institute</p>
         <div className="flex gap-4 mt-2 md:mt-0 text-xl">
           <a href="https://www.facebook.com/rolpapolytechnic" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+          <a href="https://www.tiktok.com/search?q=rolpa%20polytechnic%20institute&t=1753104619613" target="_blank" rel='noopener noreferrer'><FaTiktok/></a>
           <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-          <a href="#"><FaGithub /></a>
-          <a href="#"><FaDribbble /></a>
         </div>
       </div>
 
       {/* Nepali Bottom Text */}
-      <div className="bg-blue-gray-50 flex flex-row text-black text-center py-2 text-sm font-semibold">
+      <div className="bg-blue-gray-50 flex flex-row text-black text-center py-2 text-sm font-bold">
         <marquee>
           <span>सिपमुलक शिक्षा पढौं,आत्मनिर्भर बनौं।। </span>
         </marquee>
-        <marquee> <span className="mx-4">प्राविधिक शिक्षा आजको आवश्यकता।।</span>
+        <marquee> <span className="mx-6 ">प्राविधिक शिक्षा आजको आवश्यकता।।</span>
          </marquee>
          <marquee> <span>रोजगारी बनौं।।</span></marquee>
       </div>
